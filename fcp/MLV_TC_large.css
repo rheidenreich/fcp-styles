@@ -1,0 +1,372 @@
+/**
+ * Navigation boilerplate
+ * @description: A responsive frame to wrap your layout.
+ */
+
+/* Icons
+---------------------------------------------------------------*/
+
+@font-face {
+    font-family: 'navigation';
+    src: url('https://static.mlstatic.com/org-img/ui/navigation/1.0.0/navigation.eot?93575983');
+    src: url('https://static.mlstatic.com/org-img/ui/navigation/1.0.0/navigation.eot?93575983#iefix') format('embedded-opentype'),
+    url('https://static.mlstatic.com/org-img/ui/navigation/1.0.0/navigation.woff?93575983') format('woff'),
+    url('https://static.mlstatic.com/org-img/ui/navigation/1.0.0/navigation.ttf?93575983') format('truetype'),
+    url('https://static.mlstatic.com/org-img/ui/navigation/1.0.0/navigation.svg?93575983#fontello') format('svg');
+    font-style: normal;
+    font-weight: normal;
+}
+
+[class^='icon-']:before,
+[class*=' icon-']:before {
+    display: inline-block;
+    font-family: 'navigation';
+    font-style: normal;
+    font-variant: normal; /* For safety - reset parent styles, that can break glyph codes*/
+    margin: 0 .2em;
+    speak: none;
+    text-align: center;
+    width: 1em;
+}
+
+/* Bounds
+---------------------------------------------------------------*/
+
+.fcp-bounds {
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+main.fcp-bounds,
+[role='main'].fcp-bounds {
+    padding-top: 1em;
+}
+
+.fcp-wrapper {
+    padding-top: 54px; /* same as header height */
+}
+
+.fcp-wrapper:after {
+    height: 180px; /* same as footer height */
+}
+
+
+/* Hidden elements from smaller devices
+---------------------------------------------------------------*/
+
+
+.fcp-header-btn,
+.fcp-footer-user {
+    display: none;
+}
+
+
+/* Header
+---------------------------------------------------------------*/
+
+.fcp-header {
+    background-image: none;
+    height: 54px;
+    left: 0;
+    position: absolute; /* Just change this to FIXED for a fixed header */
+    right: 0;
+    top: 0;
+    z-index: 1;
+}
+
+.fcp-header .fcp-bounds {
+    position: relative;
+}
+
+
+/* Logo
+---------------------------------------------------------------*/
+
+.fcp-header h1 {
+    /* HTTPS logo: https://secure.mlstatic.com/org-img/ui/ml/logo/1.0.0/mercadolibre.png */
+    background-image: url('https://resources.mlstatic.com/fcp_resources/images/fcp/logo-tuc.png');
+    display: block;
+    height: 30px;
+    margin-top: 12px; /* difference between header height and image height */
+    overflow: hidden;
+    text-indent: -999px;
+    width: 220px;
+}
+
+/* Header Menu
+---------------------------------------------------------------*/
+
+.fcp-header-menu {
+    bottom: 0;
+    display: block;
+    position: absolute;
+    right: 10px; /* same as bounds right padding */
+    top: -5px;
+    line-height: 42px; /* same as logo height because that's giving the size to the bounds */
+}
+
+#navigation-menu {
+    display: none;
+}
+
+/* Normal state */
+
+.fcp-bounds .fcp-header-menu > a,
+.lt-ie9 .fcp-bounds .fcp-header-menu a, /* IE8 replacement for layer */
+.lt-ie9 .fcp-bounds .fcp-header-menu a:visited,
+[for='fcp-header-user'] {
+    color: #fff;
+    filter: alpha(opacity=80);
+    opacity: .8;
+    text-decoration: none;
+    zoom: 1;
+}
+
+/* Hover state */
+
+.fcp-bounds .fcp-header-menu > a:hover,
+.lt-ie9 .fcp-bounds .fcp-header-menu a:hover, /* IE8 replacement for layer */
+[for='fcp-header-user']:hover {
+    filter: alpha(opacity=100);
+    opacity: 1;
+}
+
+/* Widgets */
+
+.fcp-header-menu i:before {
+    vertical-align: middle;
+    color: inherit;
+}
+
+.icon-user:before {
+    content: '\e801';
+    font-size: 1.6em;
+    margin-left: .4em;
+}
+
+.fcp-help,
+.fcp-notifications,
+.fcp-favorites {
+    position: absolute;
+    text-indent: -9000px;
+}
+
+/* FAQ icon */
+.icon-help-circled:before {
+    content: '\e800';
+    font-size: 1.5em;
+}
+
+.fcp-icon-notifications,
+.fcp-icon-heart {
+    font-size: 1.3em;
+}
+
+/* Notificacions and Favorites */
+.fcp-header-menu .fcp-notifications-widget,
+.fcp-header-menu .fcp-favorites-widget {
+    padding: .4em .2em;
+}
+
+/* Action links */
+
+.actions {
+    float: right;
+    margin: 0 0 0 8px;
+}
+div.actions a {
+    color:#fff;
+    filter: alpha(opacity=80);
+    opacity: .8;
+    border-left:1px solid #4d4d4d;
+    padding: 4px 8px;
+    text-decoration: none;
+}
+
+div.actions a.fcp-register {
+    border-left: none;
+}
+
+div.actions a:hover {
+    filter: alpha(opacity=100);
+    opacity: 1;
+    text-decoration: none;
+}
+
+div.actions a.fcp-register {
+    border: none;
+}
+
+/* User Layer
+---------------------------------------------------------------*/
+
+[for='header-user'] {
+    cursor: pointer;
+    color:#fff;
+    filter: alpha(opacity=80);
+    opacity: .8;
+    font-size: .85em;
+    padding: .85em 0;
+    margin-right: 0; /* same as padding of the menu anchors */
+    text-transform: uppercase;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+[for='header-user']:hover {
+    filter: alpha(opacity=100);
+    opacity: 1;
+}
+
+#header-user,
+.fcp-header-user-layer {
+    display: none;
+}
+
+.fcp-header-user-layer {
+    background-color: #fff;
+    border: 1px solid #dedede;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px rgba(99, 99, 99, .2);
+    left: 0;
+    padding-left: 0;
+    position: absolute;
+    top: 35px;
+    z-index: 1;
+    width: 150px;
+}
+
+.fcp-header-user-layer:before,
+.fcp-header-user-layer:after {
+    border: outset transparent; /* border transparent bug on FF: http://stackoverflow.com/a/6225439 */
+    border-bottom-style: solid;
+    bottom: 100%;
+    content: '';
+    display: block;
+    height: 0;
+    pointer-events: none;
+    position: absolute;
+    width: 0;
+}
+
+.fcp-header-user-layer:before {
+    border-bottom-color: #ddd;
+    border-width: 10px;
+    left: 50%;
+    margin-left: -10px;
+}
+
+.fcp-header-user-layer:after {
+    border-bottom-color: #fff;
+    border-width: 9px;
+    left: 50%;
+    margin-left: -9px;
+}
+
+.fcp-header-user-layer ul li a {
+    color: #000;
+    display: block;
+    line-height: 25px;
+    margin: 3px 0;
+    padding: 5px 15px;
+    text-decoration: none;
+}
+
+.fcp-header-user-layer a:hover {
+    background-color: #fefbd6;
+}
+
+#header-user:checked + .fcp-header-user-layer {
+    display: block;
+}
+
+/* Footer
+---------------------------------------------------------------*/
+
+.fcp-footer {
+    height: 180px; /* same as wrapper:after size */
+    margin-top: -180px; /* same as height */
+    position: relative;
+}
+
+.fcp-footer ul {
+    overflow: hidden;
+    zoom: 1;
+    margin: 0 0 5px 10px;
+}
+
+.fcp-footer li {
+    float: left;
+    padding-right: 5px;
+    margin-right: 5px;
+    line-height: 16px;
+    border-right: 1px solid #999;
+}
+
+.fcp-footer li:last-child {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+.fcp-contact {
+    position: relative;
+    font-size: 13px;
+    float: right;
+}
+
+.fcp-copy {
+    border-top:1px dashed #ccc;
+    padding-top:5px;
+}
+
+.fcp-copy,
+.fcp-copyright {
+    color: #666;
+    font-size: 11px;
+    font-weight: normal;
+    margin-left: 10px;
+    width: 99%;
+}
+
+.fcp-footer small {
+    display: none;
+}
+
+/* Contextual layout
+---------------------------------------------------------------*/
+
+.fcp-contextual main,
+.fcp-contextual [role='main'] {
+    background-color: #fff;
+    margin: 3em auto;
+    max-width: 768px;
+    padding: 0;
+}
+
+/* Notifications
+---------------------------------------------------------------*/
+
+.fcp-header-menu .notifications a {
+    border: none;
+}
+
+.icon-notifications:before {
+    content:'\f004';
+}
+
+.fcp-header-mobile-menu-icon {
+    display: none;
+}
+
+/* Separator style
+----------------------------------------------------------------*/
+.separator {
+    border-left: 1px solid #4d4d4d;
+    padding: 2px 2px 2px 2px;
+    display: inline;
+    margin-left: 2px;
+    margin-right: 2px;
+}

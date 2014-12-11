@@ -1,0 +1,352 @@
+/**
+ * Navigation boilerplate
+ * @description: A responsive frame to wrap your layout.
+ */
+
+/* Icons
+---------------------------------------------------------------*/
+
+@font-face {
+    font-family: 'navigation';
+    src: url('https://static.mlstatic.com/org-img/ui/navigation/1.0.0/navigation.eot?93575983');
+    src: url('https://static.mlstatic.com/org-img/ui/navigation/1.0.0/navigation.eot?93575983#iefix') format('embedded-opentype'),
+    url('https://static.mlstatic.com/org-img/ui/navigation/1.0.0/navigation.woff?93575983') format('woff'),
+    url('https://static.mlstatic.com/org-img/ui/navigation/1.0.0/navigation.ttf?93575983') format('truetype'),
+    url('https://static.mlstatic.com/org-img/ui/navigation/1.0.0/navigation.svg?93575983#fontello') format('svg');
+    font-style: normal;
+    font-weight: normal;
+}
+
+[class^='icon-']:before,
+[class*=' icon-']:before {
+    display: inline-block;
+    font-family: 'navigation';
+    font-style: normal;
+    font-variant: normal; /* For safety - reset parent styles, that can break glyph codes*/
+    margin: 0 .2em;
+    speak: none;
+    text-align: center;
+    width: 1em;
+}
+
+/* Bounds
+---------------------------------------------------------------*/
+
+.fcp-bounds {
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+main.fcp-bounds,
+[role='main'].fcp-bounds {
+    padding-top: 70px;
+}
+
+.fcp-wrapper {
+    padding-top: 54px; /* same as header height */
+}
+
+.fcp-wrapper:after {
+    height: 180px; /* same as footer height */
+}
+
+
+/* Hidden elements from smaller devices
+---------------------------------------------------------------*/
+
+.fcp-header-btn,
+.fcp-footer-user {
+    display: none;
+}
+
+
+/* Header
+---------------------------------------------------------------*/
+
+.fcp-header {
+    background-image: none;
+    height: 54px;
+    left: 0;
+    position: absolute; /* Just change this to FIXED for a fixed header */
+    right: 0;
+    top: 0;
+    z-index: 1;
+}
+
+.fcp-header .fcp-bounds {
+    position: relative;
+}
+
+
+/* Logo
+---------------------------------------------------------------*/
+.fcp-header h1 {
+    background-image: url('http://static.mlstatic.com/org-img/commons/logo-mercadolibre-new.png');
+    background-repeat: no-repeat;
+    display: block;
+    height: 42px;
+    margin-top: 7px; /* difference between header height and image height */
+    overflow: hidden;
+    text-indent: -999px;
+    width: 220px;
+}
+
+/* Header Menu
+---------------------------------------------------------------*/
+
+.fcp-header-menu {
+    display: inline-block;
+    position: relative;
+    right: 10px; /* same as bounds right padding */
+    top: -30px;
+    float: right;
+}
+
+#navigation-menu {
+    display: none;
+}
+
+/* Normal state */
+.fcp-header-menu > a,
+.lt-ie9 .fcp-header-menu a, /* IE8 replacement for layer */
+.lt-ie9 .fcp-header-menu a:visited,
+[for='header-user'] {
+    color: #666;
+    filter: alpha(opacity=80);
+    opacity: .8;
+    text-decoration: none;
+    zoom: 1;
+}
+/* Hover state */
+
+.fcp-bounds .fcp-header-menu > a:hover,
+.lt-ie9 .fcp-bounds .fcp-header-menu a:hover, /* IE8 replacement for layer */
+[for='fcp-header-user']:hover {
+    filter: alpha(opacity=100);
+    opacity: 1;
+}
+
+/* Widgets */
+
+.fcp-header-menu i:before {
+    vertical-align: middle;
+    color: inherit;
+}
+
+.icon-user:before {
+    content: '\e801';
+    font-size: 1.6em;
+    margin-left: .4em;
+}
+
+.fcp-help,
+.fcp-notifications,
+.fcp-favorites {
+    position: absolute;
+    text-indent: -9000px;
+}
+
+/* FAQ icon */
+.icon-help-circled:before {
+    content: '\e800';
+    font-size: 1.5em;
+}
+
+.fcp-icon-notifications,
+.fcp-icon-heart {
+    font-size: 1.3em;
+}
+
+/* Notificacions and Favorites */
+.fcp-header-menu .fcp-notifications-widget,
+.fcp-header-menu .fcp-favorites-widget {
+    padding: .4em .2em;
+}
+
+/* Action links */
+
+.actions {
+    float: right;
+    margin: 0 0 0 8px;
+}
+div.actions a {
+    color:#666;
+    filter: alpha(opacity=80);
+    opacity: .8;
+    border-left:1px solid #dccf50;
+    padding: 4px 8px;
+    text-decoration: none;
+}
+
+div.actions a.fcp-register {
+    border-left: none;
+}
+
+div.actions a:hover {
+    filter: alpha(opacity=100);
+    opacity: 1;
+    text-decoration: none;
+}
+
+div.actions a.fcp-register {
+    border: none;
+}
+
+/* User Layer
+---------------------------------------------------------------*/
+
+[for='header-user'] {
+    cursor: pointer;
+    color: #666;
+    filter: alpha(opacity=80);
+    opacity: .8;
+    font-size: .85em;
+    padding: .85em 0;
+    margin-right: 0; /* same as padding of the menu anchors */
+    text-transform: uppercase;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+[for='header-user']:hover {
+    filter: alpha(opacity=100);
+    opacity: 1;
+}
+
+#header-user,
+.fcp-header-user-layer {
+    display: none;
+}
+
+.fcp-header-user-layer {
+    background-color: #fff;
+    border: 1px solid #dedede;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px rgba(99, 99, 99, .2);
+    left: 0;
+    padding-left: 0;
+    position: absolute;
+    top: 35px;
+    z-index: 1;
+    width: 150px;
+}
+
+.fcp-header-user-layer:before,
+.fcp-header-user-layer:after {
+    border: outset transparent; /* border transparent bug on FF: http://stackoverflow.com/a/6225439 */
+    border-bottom-style: solid;
+    bottom: 100%;
+    content: '';
+    display: block;
+    height: 0;
+    pointer-events: none;
+    position: absolute;
+    width: 0;
+}
+
+.fcp-header-user-layer:before {
+    border-bottom-color: #ddd;
+    border-width: 10px;
+    left: 50%;
+    margin-left: -10px;
+}
+
+.fcp-header-user-layer:after {
+    border-bottom-color: #fff;
+    border-width: 9px;
+    left: 50%;
+    margin-left: -9px;
+}
+
+.fcp-header-user-layer a {
+    color: #000;
+    display: block;
+    line-height: 25px;
+    margin: 3px 0;
+    padding: 5px 15px;
+    text-decoration: none;
+}
+
+.fcp-header-user-layer a:hover {
+    background-color: #fefbd6;
+}
+
+#header-user:checked + .fcp-header-user-layer {
+    display: block;
+}
+
+/* Footer
+---------------------------------------------------------------*/
+
+.fcp-footer {
+    background-color: #f7f7f7;
+    border-top: 1px solid #eee;
+    height: 54px; /* same as wrapper:after size */
+    line-height: 54px; /* same as height */
+    margin-top: -54px; /* same as height */
+}
+
+.fcp-footer small {
+    line-height: 1em;
+}
+
+.fcp-footer nav {
+    display: inline-block;
+}
+
+.fcp-footer nav a {
+    border-right: 1px solid #ddd;
+    padding: 0 .8em;
+}
+
+.fcp-footer nav a:last-of-type {
+    border-right: none;
+}
+
+.fcp-footer span {
+    font-size: 12px;
+    line-height: 15px;
+    margin-top: 20px;
+    position: absolute;
+    text-align: right;
+    width: 380px;
+}
+
+/* Contextual layout
+---------------------------------------------------------------*/
+
+.fcp-contextual main,
+.fcp-contextual [role='main'] {
+    background-color: #fff;
+    margin: 3em auto;
+    max-width: 768px;
+    padding: 0;
+}
+
+/* Notifications
+---------------------------------------------------------------*/
+
+.fcp-header-menu .fcp-notifications a {
+    border: none;
+}
+
+.icon-notifications:before {
+    content:'\f004';
+}
+
+.fcp-header-mobile-menu-icon {
+    display: none;
+}
+
+/* Separator style
+----------------------------------------------------------------*/
+
+.separator {
+    border-left: 1px solid #dccf50;
+    padding: 2px 2px 2px 2px;
+    display: inline;
+    margin-left: 2px;
+    margin-right: 2px;
+}

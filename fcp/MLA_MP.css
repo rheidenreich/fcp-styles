@@ -1,0 +1,84 @@
+/* Header
+---------------------------------------------------------------*/
+
+.header {
+    background-color: #ededed;
+    border-bottom: 1px solid #d9d9d9;
+    color: #2e2e2e;
+}
+
+/* Header Menu
+---------------------------------------------------------------*/
+
+.header-menu {
+    /*top: 1px;*/
+}
+
+.header-menu > a:first-of-type {
+    border-left: 1px solid #d1d9e0;
+}
+
+.header-menu > a {
+    border-right: 1px solid #d1d9e0;
+}
+
+/* Normal state */
+.header-menu > a,
+.lt-ie9 .header-menu a, /* IE8 replacement for layer */
+.lt-ie9 .header-menu a:visited,
+[for='header-user'] {
+    color: #2e2e2e;
+}
+
+.header-user {
+    /*border-right: 1px solid #d1d9e0;*/
+    /*padding-right: 10px;*/
+}
+
+.hf-icon-notifications.ch-icon-extended:before {
+    color: #2e2e2e;
+}
+
+/* Logo
+---------------------------------------------------------------*/
+
+.logo {
+    background-image: url('https://secure.mlstatic.com/components/resources/mp/desktop/css/assets/desktop-logo-mercadopago.png');
+    margin-top: 6px;
+    height: 42px;
+}
+
+/* Search
+---------------------------------------------------------------*/
+
+.search {
+    /*margin: 0px 0 0 250px;*/
+}
+
+/* Footer
+---------------------------------------------------------------*/
+
+.footer {
+    color: #8e8e8e;
+    background-color: #f8f8f8;
+    border-top: 1px solid #ecebec;
+    height: 61px;
+    margin-top: -61px;
+    padding: 10px;
+    line-height: 20px;
+}
+
+.footer-menu > a:first-of-type {
+    border-left: none;
+    padding: 0px;
+}
+
+.footer-menu > a {
+    color: #06c;
+    border-right: 1px solid #DADAEA;
+    padding: 0 .8em;
+}
+
+.footer-menu > a:last-of-type {
+    border-right: none;
+}

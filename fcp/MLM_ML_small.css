@@ -1,0 +1,309 @@
+/**
+ * Navigation boilerplate
+ * @description: A responsive frame to wrap your layout.
+ */
+
+/* Base
+---------------------------------------------------------------*/
+
+
+/**
+ * Header and footer box model
+ */
+
+.fcp-border-box,
+.fcp-border-box:before,
+.fcp-border-box:after,
+.fcp-border-box *,
+.fcp-border-box *:before,
+.fcp-border-box *:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/**
+ * Reset basic elements
+ */
+
+html,
+body {
+    color:#333;
+    background-color: #fff;
+    font-size: 13px;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 20px;
+}
+
+a {
+    color:#03b;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+p {
+
+}
+
+i {
+    font-style: normal;
+}
+
+li {
+    list-style-type: none;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    vertical-align: baseline;
+}
+
+/* Bounds
+---------------------------------------------------------------*/
+
+.fcp-bounds {
+    display: block;
+    padding: 0 10px;
+}
+
+.fcp-wrapper {
+    min-height: 100%;
+    padding-bottom: 1em;
+}
+
+.fcp-wrapper:after {
+    content: '';
+    display: block;
+    height: 95px; /* same as footer height */
+}
+
+
+/* Header
+---------------------------------------------------------------*/
+
+.fcp-header {
+    background-color: #FFF059;
+    border-bottom: 1px solid #d9d9d9;
+    color: #5b562f;
+    height: 44px; /* It changes in bigger devices */
+    margin-bottom: 1em;
+    position: relative;
+}
+
+
+/* Title of the page
+---------------------------------------------------------------*/
+
+.fcp-header h1 {
+    font-size: 1.2em;
+    line-height: 44px; /* same as header height. It changes in small devices */
+    margin: 0;
+    text-align: center;
+    text-shadow: 0 1px rgba(255, 255, 255, .75);
+}
+
+/* Hidden elements from bigger devices
+---------------------------------------------------------------*/
+
+.fcp-logo,
+.fcp-header-menu {
+    display: none;
+}
+
+
+/* Header buttons
+---------------------------------------------------------------*/
+
+.fcp-header-btn,
+.fcp-header-action {
+    background-image: url('https://resources.mlstatic.com/fcp_resources/images/fcp/logo-ml-32x32.png');
+    background-repeat: no-repeat;
+    /*    background-image: -webkit-linear-gradient(transparent 25%, rgba(99, 99, 99, .12));
+        background-image: linear-gradient(transparent 25%, rgba(99, 99, 99, .12));*/
+    font-size: .9em;
+    height: 32px;
+    left: 7px; /* keep the same distance as top */
+    line-height: 32px;
+    padding: 0 40px;
+    position: absolute;
+    top: 7px; /* difference between header height and button height */
+}
+
+.fcp-header-mobile-menu-icon {
+    color: #808080;
+    filter: alpha(opacity=80);
+    opacity: .8;
+    zoom: 1;
+    content: '';
+    padding: 10px 0 0 3px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 42px;
+    width: 38px;
+}
+
+.fcp-header-mobile-menu-icon:hover {
+    filter: alpha(opacity=100);
+    opacity: 1;
+    zoom: 1;
+    top: 0;
+    right: 0;
+    padding-top: 10px;
+    height: 42px;
+    width: 38px;
+    text-decoration: none;
+}
+
+.fcp-icon-reorder:before {
+    font-size: 24px;
+    color: #808080;
+}
+
+.fcp-header-btn,
+.fcp-header-btn:visited,
+a.fcp-header-btn,
+a.fcp-header-btn:visited {
+    color: inherit;
+    text-decoration: none;
+    color:#DADAEA;
+}
+
+.fcp-header-btn:active {
+    background-image: -webkit-linear-gradient(rgba(99, 99, 99, .12) 25%, rgba(99, 99, 99, .2));
+    background-image: linear-gradient(rgba(99, 99, 99, .12) 25%, rgba(99, 99, 99, .2));
+    box-shadow: inset 0 1px rgba(99, 99, 99, .2);
+}
+
+.fcp-header-action {
+    left: auto;
+    right: 7px; /* keep the same distance as top */
+}
+
+#navigation-menu {
+    display: none;
+}
+
+#navigation-menu:checked + .fcp-header-menu {
+    display: block;
+    margin-top:45px;
+}
+
+/* Search
+---------------------------------------------------------------*/
+
+.fcp-search {
+    margin: 0 0 0 210px;
+    position: absolute;
+    float: left;
+    background: #FFF;
+    border-radius: 4px;
+    width: 44%;
+    height: 40px;
+    top: 0;
+}
+
+.fcp-search input[type="text"] {
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 16px;
+    padding: 5px 10% 5px 2%;
+    margin: 0;
+    width: 100%;
+    height: 40px;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    font-family: Arial,Helvetica,"Nimbus Sans L",sans-serif;
+}
+
+.fcp-search input[type="text"]:focus {
+    -webkit-box-shadow:1px 1px 2px #ccc;
+    -moz-box-shadow:1px 1px 2px #ccc;
+    box-shadow:1px 1px 2px #ccc;
+    outline: none;
+}
+
+.fcp-search .fcp-btn {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    line-height: 40px;
+    height: 40px;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 46px;
+    -webkit-border-radius: 0 3px 3px 0;
+    -moz-border-radius: 0 3px 3px 0;
+    border-radius: 0 3px 3px 0;
+}
+
+.fcp-icon-search {
+    color: #666;
+    font-size: 1.6em;
+}
+
+.fcp-icon-search::before {
+    top:0!important;
+}
+
+.fcp-btn span {
+    position: absolute;
+    text-indent: -9000px;
+}
+
+/* Footer
+---------------------------------------------------------------*/
+
+.fcp-footer {
+    color: #999;
+    font-size: 13px;
+    height: 95px; /* same as wrapper:after size */
+    margin-top: -95px; /* same as height */
+    overflow: hidden;
+}
+
+.fcp-footer small {
+    font-size: inherit;
+    line-height: 4em;
+}
+
+.fcp-footer-nav {
+    display: none;
+}
+
+.fcp-footer-user {
+    background-color: #f7f7f7;
+    border-radius: 5px;
+    padding: .9em;
+}
+
+.fcp-footer-user .ch-btn-skin {
+    margin-right: 1em;
+}
+
+/* Contextual layout
+---------------------------------------------------------------*/
+
+.fcp-contextual .fcp-wrapper {
+    background-color: #f7f7f7;
+}
+
+.fcp-contextual .fcp-footer-user {
+    background-color: transparent;
+    border-bottom: 1px solid #eee;
+    border-radius: 0;
+    padding-left: 0;
+    padding-right: 0;
+}

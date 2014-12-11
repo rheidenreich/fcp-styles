@@ -1,0 +1,103 @@
+/* Header
+---------------------------------------------------------------*/
+
+.fcp .header {
+    background-color: #363636;
+    border-bottom: 1px solid #d9d9d9;
+    color: #5b562f;
+}
+
+/* Header Menu
+---------------------------------------------------------------*/
+
+.header-menu {
+    top: -3px;
+}
+
+.header-menu > a:first-of-type {
+    border-left: 1px solid #4D4D4D;
+}
+
+.header-menu > a {
+    border-right: 1px solid #4D4D4D;
+}
+
+/* Normal state */
+.header-menu > a,
+.lt-ie9 .header-menu a, /* IE8 replacement for layer */
+.lt-ie9 .header-menu a:visited,
+[for='header-user'] {
+    color: #EDEDED;
+}
+
+.header-user {
+    /*border-right: 1px solid #4D4D4D;*/
+    /*padding-right: 10px;*/
+}
+
+.hf-icon-notifications.ch-icon-extended:before {
+    color: #EDEDED;
+}
+
+/* Logo
+---------------------------------------------------------------*/
+
+.logo {
+    background-image: url('http://static.mlstatic.com/org-img/commons/logo-autoplaza.png');
+    margin-top: 10px;
+    height: 44px;
+}
+
+/* Search
+---------------------------------------------------------------*/
+
+.search {
+    /*margin: -4px 0 0 250px;*/
+}
+
+/* Footer
+---------------------------------------------------------------*/
+
+.footer {
+    color: #666;
+    background-color: #fff;
+    border-top: none;
+    height: 130px;
+    margin-top: -130px;
+    padding: 10px;
+    font-size: 12px;
+    line-height: 20px;
+}
+
+.footer-menu > a:first-of-type {
+    border-left: none;
+    padding: 0px;
+}
+
+.footer-menu > a {
+    color: #06c;
+    border-right: 1px solid #DADAEA;
+    padding: 0 .8em;
+}
+
+.footer-menu > a:last-of-type {
+    border-right: none;
+}
+
+.left-menu {
+    width: 50%;
+    display: inline-block;
+}
+
+.right-menu {
+    width: 50%;
+    display: inline-block;
+}
+
+.bottom-menu {
+    border-top: 1px solid #ecebec;
+    padding-top: 5px;
+    margin-top: 5px;
+    font-size: 11px;
+    line-height: 1.2;
+}

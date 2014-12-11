@@ -1,0 +1,138 @@
+@media only screen and (max-width : 1024px) {
+    .fcp-search {
+        width: 28%;
+    }
+
+    .fcp-footer span,
+    .fcp-contact {
+        display: none;
+    }
+
+}
+
+@media only screen and (max-width : 768px) {
+
+    /* Header
+    ---------------------------------------------------------------*/
+
+    .fcp-header {
+        margin-bottom: 20px;
+        z-index: 1;
+    }
+
+    .fcp-header h1 {
+        display: none;
+    }
+
+    /* Menu
+    ---------------------------------------------------------------*/
+
+    .fcp-header-menu {
+        position: absolute;
+        width: 100%;
+        left: 0;
+    }
+
+    .fcp-header-menu a {
+        background-color: #fff;
+        border-bottom: 1px solid #999;
+        color:#999;
+        display: block;
+        padding: 8px 0;
+        text-decoration: none;
+    }
+
+    a.fcp-logout,
+    a.fcp-my-account,
+    a.fcp-sell,
+    span.fcp-help,
+    a.fcp-login,
+    a.fcp-register,
+    .fcp-notifications,
+    .fcp-favorites {
+        padding-left: 10px;
+    }
+
+    .fcp-header-menu a:after {
+        color: #ccc;
+        content: '\e007';
+        line-height: 26px;
+        font-size: 14px;
+        font-family: IconsExtended;
+        float: right;
+        display: block;
+        margin-right: 15px;
+    }
+
+    .fcp-logo,
+    .fcp-header-user,
+    #header-user,
+    .fcp-icon-notifications,
+    .fcp-header-user-layer,
+    .fcp-icon-heart,
+    #favorites-widget-checkbox,
+    .fcp-favorite-menu-wrapper {
+        display: none;
+    }
+
+    /* Search
+    ---------------------------------------------------------------*/
+
+    .fcp-search {
+        height: 32px;
+        width: 80%;
+        float: right;
+        top: 5px;
+        right: 45px;
+    }
+
+    .fcp-search input[type="text"] {
+        border: 1px solid #ccc;
+        font-size: 13px;
+        font-weight: normal;
+        height: 33px;
+        top: 0;
+    }
+
+    .fcp-search .fcp-btn {
+        background: linear-gradient(to bottom,#fff 0,#f1f1f1 100%);
+        border: 1px solid #ccc;
+        height: 33px;
+        top: 0;
+        z-index: 2;
+    }
+
+    .fcp-header .ch-icon-search {
+        background-color: transparent;
+        background-position:14px 8px;
+    }
+
+    .fcp-btn:hover {
+        background-color: #4C4C50;
+    }
+
+
+    .fcp-icon-search {
+        position: absolute;
+        top: -5px;
+        right: 12px;
+    }
+
+    /* Footer
+    ---------------------------------------------------------------*/
+
+    .fcp-footer nav {
+        display: none;
+    }
+
+}
+
+@media only screen and (max-width : 480px) {
+    .fcp-search {
+        width: 73%;
+    }
+
+    .fcp-footer small {
+        font-size: 11px;
+    }
+}
